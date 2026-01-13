@@ -7,7 +7,7 @@ def call() {
         writeFile file: "Dockerfile", text: """
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
-COPY backend/target/*.jar app.jar
+COPY build/libs/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
 """
